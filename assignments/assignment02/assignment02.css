@@ -49,10 +49,10 @@ span {
   background-color: yellow;
   border-style: solid; color: blue; width: 5px;
 }
-.a span {
+span .a {
   background-color:pink;
 }
-.b span {
+span .b {
   position: absolute;
   top: 0;
   background-color:pink;
