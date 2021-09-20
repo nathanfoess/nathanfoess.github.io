@@ -10,12 +10,12 @@
 
 
 /* --- pre-existing css --- */
-img [alt=”cat icon”]{
+img [alt="cat icon”]{
  position: fixed;
  bottom: 10px; 
  right: 10px;
  }
-img [alt = "dog icon"]{
+img [alt="dog icon"]{
   position: relative;
   left: 50px;
   top: 150px;
