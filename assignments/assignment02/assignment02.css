@@ -1,9 +1,9 @@
 /* --- put your css here --- */ 
-img [alt="cat icon"]{
- position: fixed;
- bottom: 10px; 
+#cat {
+ position: relative;
+ bottom: 10px;
  right: 10px;
- }
+}
 /*img [alt="dog icon"]{
   position: relative;
   left: 50px;
