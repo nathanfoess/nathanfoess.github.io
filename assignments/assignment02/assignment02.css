@@ -49,7 +49,7 @@ span {
   background-color: yellow;
   border-style: solid; color:blue; width:5px;
 }
-.a {
+.a span {
   background-color:red;
 }
   
