@@ -50,7 +50,6 @@ span {
   border-style: solid; color: blue; width: 5px;
 }
 .a span {
-  background-color:red;
-  height: 100px;
+  background-color: red;
 }
   
