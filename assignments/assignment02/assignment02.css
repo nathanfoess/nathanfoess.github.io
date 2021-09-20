@@ -55,5 +55,6 @@ span {
 .b span {
   position: absolute;
   top: 0;
+  background-color:pink;
 }
   
