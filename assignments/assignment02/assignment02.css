@@ -34,7 +34,6 @@ input[type="text"].pinkey:focus {
   font-family: Arial, Helvetica, sans-serif;
 }
 .classy {
-  text-align: left;
-  text-indent: 10px;
+  margin-left: 10px;
 }
   
