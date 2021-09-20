@@ -10,7 +10,7 @@
 
 
 /* --- pre-existing css --- */
-img {
+img [alt=”cat icon”]{
  position: fixed;
  bottom: 10px; 
  right: 10px;
