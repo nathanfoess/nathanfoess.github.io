@@ -52,4 +52,8 @@ span {
 .a span {
   background-color: red;
 }
+.b span {
+  position: absolute;
+  top: 0;
+}
   
