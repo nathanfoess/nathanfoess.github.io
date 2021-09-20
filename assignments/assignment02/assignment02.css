@@ -4,11 +4,11 @@ img [alt="cat icon"]{
  bottom: 10px; 
  right: 10px;
  }
-img [alt="dog icon"]{
+/*img [alt="dog icon"]{
   position: relative;
   left: 50px;
   top: 150px;
-}
+}*/
 /* I used font family to use multiple fonts for one ID, but only 1 font displays, which is what I think you wanted?*/
 #igottabeme {
   font-family: Arial, Helvetica, sans-serif;
