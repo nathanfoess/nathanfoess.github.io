@@ -9,12 +9,12 @@
 */
 
 
-/* --- pre-existing css --- */
-img [alt="cat icon”]{
+/* --- pre-existing css --- 
+img [alt="cat icon"]{
  position: fixed;
  bottom: 10px; 
  right: 10px;
- }
+ }*/
 img [alt="dog icon"]{
   position: relative;
   left: 50px;
