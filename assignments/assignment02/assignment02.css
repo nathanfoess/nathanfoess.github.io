@@ -49,8 +49,8 @@ span {
   background-color: pink;
   border-style: solid; color: blue; width: 5px;
 }
-span .a {
-  background-color:pink;
+.a span {
+  background-color:red;
 }
 span .b {
   position: absolute;
