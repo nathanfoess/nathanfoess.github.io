@@ -1,4 +1,11 @@
 /* --- put your css here --- */ 
+nav{
+  position:fixed;
+  background-color:green;
+  padding: 5px;
+  font-size: 20px;
+  opacity: 90%
+}
 #cat {
  position: fixed;
  bottom: 10px;
@@ -41,14 +48,14 @@ span {
   border-style: solid; color: blue; width: 5px;
 }
 /* Tried using (.a) (.b) and (.c) but for some reason I could only get the ID to work, but still using the span elements*/
- #d1 span {
+  span.a {
    display:inline;
 }
-#d2 span {
+span.b {
   display:block;
   width:100px;
 }
-#d3 span{
+span.c{
   display:inline-block;
   height:50px;
   width:100px;
