@@ -30,9 +30,9 @@ div {
  margin-bottom: 50px; 
 }
 span {
-  display: inline-block;
-  width: 100px;
+  display: inline;
   height: 50px;
+  width: 100px;
   padding-top: 5px;
   padding-right: 20px;
   padding-bottom: 5px;
@@ -40,8 +40,18 @@ span {
   background-color: yellow;
   border-style: solid; color: blue; width: 5px;
 }
-.a span {
-  background-color: red;
+/* Tried using (.a) (.b) and (.c) but for some reason I could only get the ID to work, but still using the span elements*/
+ #d1 span {
+   display:inline;
+}
+#d2 span {
+  display:block;
+  width:100px;
+}
+#d3 span{
+  display:inline-block;
+  height:50px;
+  width:100px;
 }
 /* external css is imported into html using the <link> tag in the <head> section, as shown below.
 
