@@ -9,6 +9,7 @@
   right: 50px;
   bottom: 150px;
 }
+/*bird positioning may be off due to difference in screen size and how much room the text will take up*/
 #bird{
   position: absolute;
   top: 50px;
