@@ -51,7 +51,7 @@ span {
   background-color: yellow;
   border-style: solid; color: blue; width: 5px;
 }
-/* Tried using (.a) (.b) and (.c) but for some reason I could only get the ID to work, but still using the span elements*/
+
   span.a {
    display:inline;
 }
