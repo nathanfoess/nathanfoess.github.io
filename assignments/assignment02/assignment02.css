@@ -23,12 +23,12 @@ nav{
 }
 /*bird positioning may be off due to difference in screen size and how much room the text will take up*/
 #bird{
-  position: relative;
+  position:absolute ;
   top: 50px;
   left: 250px;
 }
 #positionMe{
-  position:absolute;
+  position:relative;
 }
 
 /* I used font family to use multiple fonts for one ID, but only 1 font displays, which is what I think you wanted?*/
