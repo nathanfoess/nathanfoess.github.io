@@ -28,7 +28,7 @@ nav{
   left: 250px;
 }
 #positionMe{
-  position:relative;
+  position:absolute;
 }
 
 /* I used font family to use multiple fonts for one ID, but only 1 font displays, which is what I think you wanted?*/
