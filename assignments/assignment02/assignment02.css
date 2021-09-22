@@ -1,4 +1,7 @@
 /* --- put your css here --- */ 
+body{
+background-color:skyblue;
+}
 nav{
   position:fixed;
   background-color:green;
