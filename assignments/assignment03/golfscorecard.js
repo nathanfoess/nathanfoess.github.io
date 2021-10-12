@@ -10,7 +10,7 @@ elem[1]
 
 // assign a function to the + button
 elem[1].children[4].children[0].onclick 
-  = function(){add1(elem[1]);};
+  = function(){add1(elem[1])};
 
 // create an "add1" function
 function add1 (elem) {
