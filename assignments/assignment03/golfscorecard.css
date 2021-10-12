@@ -1,5 +1,5 @@
-
-/* center-align table columns */
-th, td {text-align: center;} 
+th, td {
+ text-align: center;
+}
 
        
