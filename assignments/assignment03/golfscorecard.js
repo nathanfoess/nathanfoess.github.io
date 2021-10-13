@@ -1,3 +1,5 @@
+<!--author:nathan foess Program: Assignment 03 JS Contact: Nlfoess@svsu.edu-->
+
 let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
 elem[1] = document.getElementById("1");
@@ -98,6 +100,7 @@ elem[71] = document.getElementById("c15")
 elem[72] = document.getElementById("c16")
 elem[73] = document.getElementById("c17")
 elem[74] = document.getElementById("c18")
+elem[75] = document.getElementById("c19")
 
 
 
@@ -211,6 +214,8 @@ elem[71].onclick = function() {clear(elem[15])};
 elem[72].onclick = function() {clear(elem[16])};
 elem[73].onclick = function() {clear(elem[17])};
 elem[74].onclick = function() {clear(elem[18])};
+
+elem[75].onclick = function() {clearAll()};
   
 
 
@@ -310,4 +315,13 @@ Number(elem[18].children[3].innerHTML);
 function clear(elem){
   elem.children[2].innerHTML = "-"
   elem.children[3].innerHTML = "-"
+}
+
+function clearAll(){
+for(i =1; i < 19; i++){
+  elem[i].children[2].innerHTML = "-"
+  elem[i].children[3].innerHTML = "-"
+  elem[55].children[2].innerHTML = "-"
+  elem[55].children[3].innerHTML = "-"
+}
 }
