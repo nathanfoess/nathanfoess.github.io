@@ -203,13 +203,7 @@ function over (elem){
 
 
 function add(){
-  /*
-  for(let i = 0; i < elem.length; i++){
-    if(elem[i] == ){
-      elem[i].innerHTML = 0;
-    }
-  }
-  */
+  
     addScore();
     addOver();
 }
@@ -265,5 +259,13 @@ Number(elem[17].children[3].innerHTML)+
 Number(elem[18].children[3].innerHTML);
 
 if (elem[55].children[3].innerHTML == "NaN")
+  
+  for(let i = 1; i < 19; i++){
+    if(elem[i].children[3].innerHTML == "-"){
+      elem[i].children[3].innerHTML = 0;
+    }
+  }
+  
 elem[55].children[3].innerHTML = "Hit over on every hole";
 }
+
