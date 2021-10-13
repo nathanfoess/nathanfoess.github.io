@@ -157,3 +157,11 @@ function sub1 (elem) {
     elem.children[2].innerHTML = currentScore - 1;
   }
 }
+
+function over (elem){
+  if(elem.children[2].innerHTML == "1"){
+    elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML
+  }else{
+    elem.children[3].innerHTML = "no";
+  }
+}
