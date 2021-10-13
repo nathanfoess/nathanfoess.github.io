@@ -1,78 +1,83 @@
 let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
-elem[1]
-  = document.getElementById("1");
-elem[2]
-  = document.getElementById("2");
-elem[3]
-  = document.getElementById("3");
-elem[4]
-  = document.getElementById("4");
-elem[5]
-  = document.getElementById("5");
-elem[6]
-  = document.getElementById("6");
-elem[7]
-  = document.getElementById("7");
-elem[8]
-  = document.getElementById("8");
-elem[9]
-  = document.getElementById("9");
-elem[10]
-  = document.getElementById("10");
-elem[11]
-  = document.getElementById("11");
-elem[12]
-  = document.getElementById("12");
-elem[13]
-  = document.getElementById("13");
-elem[14]
-  = document.getElementById("14");
-elem[15]
-  = document.getElementById("15");
-elem[16]
-  = document.getElementById("16");
-elem[17]
-  = document.getElementById("17");
-elem[18]
-  = document.getElementById("18");
+elem[1] = document.getElementById("1");
+elem[2] = document.getElementById("2");
+elem[3] = document.getElementById("3");
+elem[4] = document.getElementById("4");
+elem[5] = document.getElementById("5");
+elem[6] = document.getElementById("6");
+elem[7] = document.getElementById("7");
+elem[8] = document.getElementById("8");
+elem[9] = document.getElementById("9");
+elem[10] = document.getElementById("10");
+elem[11] = document.getElementById("11");
+elem[12] = document.getElementById("12");
+elem[13] = document.getElementById("13");
+elem[14] = document.getElementById("14");
+elem[15] = document.getElementById("15");
+elem[16] = document.getElementById("16");
+elem[17] = document.getElementById("17");
+elem[18] = document.getElementById("18");
 
-elem[19] 
-= document.getElementById("btn1");
-elem[20] 
-= document.getElementById("btn2");
-elem[21] 
-= document.getElementById("btn3");
-elem[22] 
-= document.getElementById("btn4");
-elem[23] 
-= document.getElementById("btn5");
-elem[24] 
-= document.getElementById("btn6");
-elem[25] 
-= document.getElementById("btn7");
-elem[26] 
-= document.getElementById("btn8");
-elem[27] 
-= document.getElementById("btn9");
-elem[28] 
-= document.getElementById("btn10");
-elem[29] 
-= document.getElementById("btn11");
-elem[30] 
-= document.getElementById("btn12");
-elem[31] 
-= document.getElementById("btn13");
-elem[32] 
-= document.getElementById("btn14");
-elem[33] 
-= document.getElementById("btn15");
-elem[34] 
-= document.getElementById("btn16");
-elem[35] 
-= document.getElementById("btn17");
-elem[36] 
-= document.getElementById("btn18");
+elem[19] = document.getElementById("btn1");
+elem[20] = document.getElementById("btn2");
+elem[21] = document.getElementById("btn3");
+elem[22] = document.getElementById("btn4");
+elem[23] = document.getElementById("btn5");
+elem[24] = document.getElementById("btn6");
+elem[25] = document.getElementById("btn7");
+elem[26] = document.getElementById("btn8");
+elem[27] = document.getElementById("btn9");
+elem[28] = document.getElementById("btn10");
+elem[29] = document.getElementById("btn11");
+elem[30] = document.getElementById("btn12");
+elem[31] = document.getElementById("btn13");
+elem[32] = document.getElementById("btn14");
+elem[33] = document.getElementById("btn15");
+elem[34] = document.getElementById("btn16");
+elem[35] = document.getElementById("btn17");
+elem[36] = document.getElementById("btn18");
+
+
+elem[37]
+= document.getElementById("over1")
+elem[38]
+= document.getElementById("over2")
+elem[39]
+= document.getElementById("over3")
+elem[40]
+= document.getElementById("over4")
+elem[41]
+= document.getElementById("over5")
+elem[42]
+= document.getElementById("over6")
+elem[43]
+= document.getElementById("over7")
+elem[44]
+= document.getElementById("over8")
+elem[45]
+= document.getElementById("over9")
+elem[46]
+= document.getElementById("over10")
+elem[47]
+= document.getElementById("over11")
+elem[48]
+= document.getElementById("over12")
+elem[49]
+= document.getElementById("over13")
+elem[50]
+= document.getElementById("over14")
+elem[51]
+= document.getElementById("over15")
+elem[52]
+= document.getElementById("over16")
+elem[53]
+= document.getElementById("over17")
+elem[54]
+= document.getElementById("over18")
+
+
+
 
 // display the number of children (all td elements)
 // console.log(elem.children.length);
@@ -117,9 +122,14 @@ elem[17].children[4].children[0].onclick
 elem[18].children[4].children[0].onclick 
   = function(){add1(elem[18]);};
 
+
+
+
+
+
+
 elem[19].onclick = function(){sub1(elem[1]);};
 elem[20].onclick = function(){sub1(elem[2]);};
-
 elem[21].onclick = function(){sub1(elem[3]);};
 elem[22].onclick = function(){sub1(elem[4]);};
 elem[23].onclick = function(){sub1(elem[5]);};
@@ -137,24 +147,24 @@ elem[34].onclick = function(){sub1(elem[16]);};
 elem[35].onclick = function(){sub1(elem[17]);};
 elem[36].onclick = function(){sub1(elem[18]);};
 
-elem[36].onclick = function(){over(elem[18]);};
-elem[35].onclick = function(){over(elem[17]);};
-elem[34].onclick = function(){over(elem[16]);};
-elem[33].onclick = function(){over(elem[15]);};
-elem[32].onclick = function(){over(elem[14]);};
-elem[31].onclick = function(){over(elem[13]);};
-elem[30].onclick = function(){over(elem[12]);};
-elem[29].onclick = function(){over(elem[11]);};
-elem[28].onclick = function(){over(elem[10]);};
-elem[27].onclick = function(){over(elem[9]);};
-elem[26].onclick = function(){over(elem[8]);};
-elem[25].onclick = function(){over(elem[7]);};
-elem[24].onclick = function(){over(elem[6]);};
-elem[23].onclick = function(){over(elem[5]);};
-elem[22].onclick = function(){over(elem[4]);};
-elem[21].onclick = function(){over(elem[3]);};
-elem[20].onclick = function(){over(elem[2]);};
-elem[19].onclick = function(){over(elem[1]);};
+elem[37].onclick = function(){over(elem[1]);};
+elem[38].onclick = function(){over(elem[2]);};
+elem[39].onclick = function(){over(elem[3]);};
+elem[40].onclick = function(){over(elem[4]);};
+elem[41].onclick = function(){over(elem[5]);};
+elem[42].onclick = function(){over(elem[6]);};
+elem[43].onclick = function(){over(elem[7]);};
+elem[44].onclick = function(){over(elem[8]);};
+elem[45].onclick = function(){over(elem[9]);};
+elem[46].onclick = function(){over(elem[10]);};
+elem[47].onclick = function(){over(elem[11]);};
+elem[48].onclick = function(){over(elem[12]);};
+elem[49].onclick = function(){over(elem[13]);};
+elem[50].onclick = function(){over(elem[14]);};
+elem[51].onclick = function(){over(elem[15]);};
+elem[52].onclick = function(){over(elem[16]);};
+elem[53].onclick = function(){over(elem[17]);};
+elem[54].onclick = function(){over(elem[18]);}
 
 
 // create an "add1" function
@@ -178,9 +188,9 @@ function sub1 (elem) {
 }
 
 function over (elem){
-  if(elem.children[2].innerHTML !="-"){
+  if(elem.children[2].innerHTML != "-"){
     elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML;
   }else{
-    elem.children[3] = "yes";
+    elem.children[3] = "-";
   }
 }
