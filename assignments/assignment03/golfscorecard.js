@@ -169,7 +169,7 @@ elem[54].onclick = function(){over(elem[18]);};
 
 elem[55].children[1].innerHTML = 18 * 4;
 
-elem[56].onclick = function() {addScore()};
+elem[56].onclick = function() {add()};
   
 
 
@@ -201,9 +201,19 @@ function over (elem){
   }
 }
 
+
+function add(){
+  /*
+  for(let i = 0; i < elem.length; i++){
+    if(elem[i] == ){
+      elem[i].innerHTML = 0;
+    }
+  }
+  */
+    addScore();
+    addOver();
+}
 function addScore (){
-  
-  
   elem[55].children[2].innerHTML = 
    
 Number(elem[1].children[2].innerHTML) +                             
@@ -227,4 +237,33 @@ Number(elem[18].children[2].innerHTML);
 
 if (elem[55].children[2].innerHTML == "NaN")
 elem[55].children[2].innerHTML = "Finish the round";
+  
+  
+}
+
+
+function addOver (){
+  elem[55].children[3].innerHTML = 
+   
+Number(elem[1].children[3].innerHTML) +                             
+Number(elem[2].children[3].innerHTML)+
+Number(elem[3].children[3].innerHTML)+
+Number(elem[4].children[3].innerHTML)+
+Number(elem[5].children[3].innerHTML)+
+Number(elem[6].children[3].innerHTML)+
+Number(elem[7].children[3].innerHTML)+
+Number(elem[8].children[3].innerHTML)+
+Number(elem[9].children[3].innerHTML)+
+Number(elem[10].children[3].innerHTML)+
+Number(elem[11].children[3].innerHTML)+
+Number(elem[12].children[3].innerHTML)+
+Number(elem[13].children[3].innerHTML)+
+Number(elem[14].children[3].innerHTML)+
+Number(elem[15].children[3].innerHTML)+
+Number(elem[16].children[3].innerHTML)+
+Number(elem[17].children[3].innerHTML)+
+Number(elem[18].children[3].innerHTML);
+
+if (elem[55].children[3].innerHTML == "NaN")
+elem[55].children[3].innerHTML = "Finish the round";
 }
