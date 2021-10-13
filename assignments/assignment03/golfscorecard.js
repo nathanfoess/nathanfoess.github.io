@@ -66,7 +66,7 @@ elem[31]
 elem[32] 
 = document.getElementById("btn14");
 elem[33] 
-= docent.getElementById("btn15");
+= document.getElementById("btn15");
 elem[34] 
 = document.getElementById("btn16");
 elem[35] 
@@ -119,22 +119,23 @@ elem[18].children[4].children[0].onclick
 
 elem[19].onclick = function(){sub1(elem[1]);};
 elem[20].onclick = function(){sub1(elem[2]);};
+
 elem[21].onclick = function(){sub1(elem[3]);};
-elem[19].onclick = function(){sub1(elem[4]);};
-elem[19].onclick = function(){sub1(elem[5]);};
-elem[19].onclick = function(){sub1(elem[6]);};
-elem[19].onclick = function(){sub1(elem[7]);};
-elem[19].onclick = function(){sub1(elem[8]);};
-elem[19].onclick = function(){sub1(elem[9]);};
-elem[19].onclick = function(){sub1(elem[10]);};
-elem[19].onclick = function(){sub1(elem[11]);};
-elem[19].onclick = function(){sub1(elem[12]);};
-elem[19].onclick = function(){sub1(elem[13]);};
-elem[19].onclick = function(){sub1(elem[14]);};
-elem[19].onclick = function(){sub1(elem[15]);};
-elem[19].onclick = function(){sub1(elem[16]);};
-elem[19].onclick = function(){sub1(elem[17]);};
-elem[19].onclick = function(){sub1(elem[18]);};
+elem[22].onclick = function(){sub1(elem[4]);};
+elem[23].onclick = function(){sub1(elem[5]);};
+elem[24].onclick = function(){sub1(elem[6]);};
+elem[25].onclick = function(){sub1(elem[7]);};
+elem[26].onclick = function(){sub1(elem[8]);};
+elem[27].onclick = function(){sub1(elem[9]);};
+elem[28].onclick = function(){sub1(elem[10]);};
+elem[29].onclick = function(){sub1(elem[11]);};
+elem[30].onclick = function(){sub1(elem[12]);};
+elem[31].onclick = function(){sub1(elem[13]);};
+elem[32].onclick = function(){sub1(elem[14]);};
+elem[33].onclick = function(){sub1(elem[15]);};
+elem[34].onclick = function(){sub1(elem[16]);};
+elem[35].onclick = function(){sub1(elem[17]);};
+elem[36].onclick = function(){sub1(elem[18]);};
 
 
 // create an "add1" function
