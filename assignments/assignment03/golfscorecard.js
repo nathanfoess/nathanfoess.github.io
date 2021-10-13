@@ -137,6 +137,25 @@ elem[34].onclick = function(){sub1(elem[16]);};
 elem[35].onclick = function(){sub1(elem[17]);};
 elem[36].onclick = function(){sub1(elem[18]);};
 
+elem[36].onclick = function(){over(elem[18]);};
+elem[35].onclick = function(){over(elem[17]);};
+elem[34].onclick = function(){over(elem[16]);};
+elem[33].onclick = function(){over(elem[15]);};
+elem[32].onclick = function(){over(elem[14]);};
+elem[31].onclick = function(){over(elem[13]);};
+elem[30].onclick = function(){over(elem[12]);};
+elem[29].onclick = function(){over(elem[11]);};
+elem[28].onclick = function(){over(elem[10]);};
+elem[27].onclick = function(){over(elem[9]);};
+elem[26].onclick = function(){over(elem[8]);};
+elem[25].onclick = function(){over(elem[7]);};
+elem[24].onclick = function(){over(elem[6]);};
+elem[23].onclick = function(){over(elem[5]);};
+elem[22].onclick = function(){over(elem[4]);};
+elem[21].onclick = function(){over(elem[3]);};
+elem[20].onclick = function(){over(elem[2]);};
+elem[19].onclick = function(){over(elem[1]);};
+
 
 // create an "add1" function
 function add1 (elem) {
@@ -159,9 +178,9 @@ function sub1 (elem) {
 }
 
 function over (elem){
-  if(elem.children[2].innerHTML == "1"){
-    elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML
+  if(elem.children[2].innerHTML !="-"){
+    elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML;
   }else{
-    elem.children[3].innerHTML = "no";
+    elem.children[3] = "yes";
   }
 }
