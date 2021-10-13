@@ -208,6 +208,12 @@ function add(){
     addOver();
 }
 function addScore (){
+  
+    for(let i = 1; i < 19; i++){
+    if(elem[i].children[2].innerHTML == "-"){
+      elem[i].children[2].innerHTML = 0;
+    }
+  }
   elem[55].children[2].innerHTML = 
    
 Number(elem[1].children[2].innerHTML) +                             
@@ -228,15 +234,16 @@ Number(elem[15].children[2].innerHTML)+
 Number(elem[16].children[2].innerHTML)+
 Number(elem[17].children[2].innerHTML)+
 Number(elem[18].children[2].innerHTML);
-
-if (elem[55].children[2].innerHTML == "NaN")
-elem[55].children[2].innerHTML = "Finish the round";
-  
-  
 }
 
 
 function addOver (){
+  
+   for(let i = 1; i < 19; i++){
+    if(elem[i].children[3].innerHTML == "-"){
+      elem[i].children[3].innerHTML = 0;
+    }
+  }
   elem[55].children[3].innerHTML = 
    
 Number(elem[1].children[3].innerHTML) +                             
@@ -258,14 +265,5 @@ Number(elem[16].children[3].innerHTML)+
 Number(elem[17].children[3].innerHTML)+
 Number(elem[18].children[3].innerHTML);
 
-if (elem[55].children[3].innerHTML == "NaN")
-  
-  for(let i = 1; i < 19; i++){
-    if(elem[i].children[3].innerHTML == "-"){
-      elem[i].children[3].innerHTML = 0;
-    }
-  }
-  
-elem[55].children[3].innerHTML = "Hit over on every hole";
-}
 
+}
