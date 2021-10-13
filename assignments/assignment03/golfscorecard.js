@@ -37,6 +37,43 @@ elem[17]
 elem[18]
   = document.getElementById("18");
 
+elem[19] 
+= document.getElementById("btn1");
+elem[20] 
+= document.getElementById("btn2");
+elem[21] 
+= document.getElementById("btn3");
+elem[22] 
+= document.getElementById("btn4");
+elem[23] 
+= document.getElementById("btn5");
+elem[24] 
+= document.getElementById("btn6");
+elem[25] 
+= document.getElementById("btn7");
+elem[26] 
+= document.getElementById("btn8");
+elem[27] 
+= document.getElementById("btn9");
+elem[28] 
+= document.getElementById("btn10");
+elem[29] 
+= document.getElementById("btn11");
+elem[30] 
+= document.getElementById("btn12");
+elem[31] 
+= document.getElementById("btn13");
+elem[32] 
+= document.getElementById("btn14");
+elem[33] 
+= docent.getElementById("btn15");
+elem[34] 
+= document.getElementById("btn16");
+elem[35] 
+= document.getElementById("btn17");
+elem[36] 
+= document.getElementById("btn18");
+
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -80,6 +117,26 @@ elem[17].children[4].children[0].onclick
 elem[18].children[4].children[0].onclick 
   = function(){add1(elem[18]);};
 
+elem[19].onclick = function(){sub1(elem[1]);};
+elem[20].onclick = function(){sub1(elem[2]);};
+elem[21].onclick = function(){sub1(elem[3]);};
+elem[19].onclick = function(){sub1(elem[4]);};
+elem[19].onclick = function(){sub1(elem[5]);};
+elem[19].onclick = function(){sub1(elem[6]);};
+elem[19].onclick = function(){sub1(elem[7]);};
+elem[19].onclick = function(){sub1(elem[8]);};
+elem[19].onclick = function(){sub1(elem[9]);};
+elem[19].onclick = function(){sub1(elem[10]);};
+elem[19].onclick = function(){sub1(elem[11]);};
+elem[19].onclick = function(){sub1(elem[12]);};
+elem[19].onclick = function(){sub1(elem[13]);};
+elem[19].onclick = function(){sub1(elem[14]);};
+elem[19].onclick = function(){sub1(elem[15]);};
+elem[19].onclick = function(){sub1(elem[16]);};
+elem[19].onclick = function(){sub1(elem[17]);};
+elem[19].onclick = function(){sub1(elem[18]);};
+
+
 // create an "add1" function
 function add1 (elem) {
   if(elem.children[2].innerHTML == "-") 
@@ -90,12 +147,12 @@ function add1 (elem) {
     elem.children[2].innerHTML = currentScore + 1;
   }
 }
-function add1 (elem) {
+function sub1 (elem) {
   if(elem.children[2].innerHTML == "-") 
-    elem.children[2].innerHTML = "1";
+    elem.children[2].innerHTML = "-1";
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
-    elem.children[2].innerHTML = currentScore + 1;
+    elem.children[2].innerHTML = currentScore - 1;
   }
 }
