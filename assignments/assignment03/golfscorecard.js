@@ -265,6 +265,5 @@ Number(elem[17].children[3].innerHTML)+
 Number(elem[18].children[3].innerHTML);
 
 if (elem[55].children[3].innerHTML == "NaN")
-elem[55].children[3].innerHTML = "Hit over on <br>
-  every hole";
+elem[55].children[3].innerHTML = "Hit over on every hole";
 }
