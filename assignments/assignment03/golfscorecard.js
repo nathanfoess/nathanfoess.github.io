@@ -1,4 +1,4 @@
-<!--author:nathan foess Program: Assignment 03 JS Contact: Nlfoess@svsu.edu-->
+//author:nathan foess Program: Assignment 03 JS Contact: Nlfoess@svsu.edu
 
 let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
