@@ -2,6 +2,8 @@
 
 let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
+
+//give each table row a index
 elem[1] = document.getElementById("1");
 elem[2] = document.getElementById("2");
 elem[3] = document.getElementById("3");
@@ -21,6 +23,9 @@ elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
 
+
+
+//give each add button a index
 elem[19] = document.getElementById("btn1");
 elem[20] = document.getElementById("btn2");
 elem[21] = document.getElementById("btn3");
@@ -41,6 +46,8 @@ elem[35] = document.getElementById("btn17");
 elem[36] = document.getElementById("btn18");
 
 
+
+//give each over button an index
 elem[37]
 = document.getElementById("over1")
 elem[38]
@@ -78,10 +85,16 @@ elem[53]
 elem[54]
 = document.getElementById("over18")
 
+
+//give the totals row an index
 elem[55] = document.getElementById("totals")
 
+
+//give the scores button an index
 elem[56] = document.getElementById("finalScores")
 
+
+//give all clear buttons an index
 elem[57] = document.getElementById("c1")
 elem[58] = document.getElementById("c2")
 elem[59] = document.getElementById("c3")
@@ -152,7 +165,7 @@ elem[18].children[4].children[0].onclick
 
 
 
-
+//assign a function to the - buttons
 elem[19].onclick = function(){sub1(elem[1]);};
 elem[20].onclick = function(){sub1(elem[2]);};
 elem[21].onclick = function(){sub1(elem[3]);};
@@ -172,6 +185,8 @@ elem[34].onclick = function(){sub1(elem[16]);};
 elem[35].onclick = function(){sub1(elem[17]);};
 elem[36].onclick = function(){sub1(elem[18]);};
 
+
+//assign a function to over buttons
 elem[37].onclick = function(){over(elem[1]);};
 elem[38].onclick = function(){over(elem[2]);};
 elem[39].onclick = function(){over(elem[3]);};
@@ -191,11 +206,12 @@ elem[52].onclick = function(){over(elem[16]);};
 elem[53].onclick = function(){over(elem[17]);};
 elem[54].onclick = function(){over(elem[18]);};
 
+// add up all par 4's
 elem[55].children[1].innerHTML = 18 * 4;
-
+// assign function to add up final scores
 elem[56].onclick = function() {add()};
 
-
+//assign a function to clear buttons
 elem[57].onclick = function() {clear(elem[1])};
 elem[58].onclick = function() {clear(elem[2])};
 elem[59].onclick = function() {clear(elem[3])};
@@ -215,6 +231,8 @@ elem[72].onclick = function() {clear(elem[16])};
 elem[73].onclick = function() {clear(elem[17])};
 elem[74].onclick = function() {clear(elem[18])};
 
+
+//assign a function to clear entire scorecard
 elem[75].onclick = function() {clearAll()};
   
 
@@ -229,6 +247,8 @@ function add1 (elem) {
     elem.children[2].innerHTML = currentScore + 1;
   }
 }
+
+//create sub1
 function sub1 (elem) {
   if(elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "-1";
@@ -238,7 +258,7 @@ function sub1 (elem) {
     elem.children[2].innerHTML = currentScore - 1;
   }
 }
-
+//create over
 function over (elem){
   if(elem.children[2].innerHTML != "-"){
     elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML;
@@ -247,12 +267,13 @@ function over (elem){
   }
 }
 
-
+//create add
 function add(){
   
     addScore();
     addOver();
 }
+//create addScore
 function addScore (){
   
     for(let i = 1; i < 19; i++){
