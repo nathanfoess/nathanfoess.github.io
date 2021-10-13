@@ -80,6 +80,27 @@ elem[55] = document.getElementById("totals")
 
 elem[56] = document.getElementById("finalScores")
 
+elem[57] = document.getElementById("c1")
+elem[58] = document.getElementById("c2")
+elem[59] = document.getElementById("c3")
+elem[60] = document.getElementById("c4")
+elem[61] = document.getElementById("c5")
+elem[62] = document.getElementById("c6")
+elem[63] = document.getElementById("c7")
+elem[64] = document.getElementById("c8")
+elem[65] = document.getElementById("c9")
+elem[66] = document.getElementById("c10")
+elem[67] = document.getElementById("c11")
+elem[68] = document.getElementById("c12")
+elem[69] = document.getElementById("c13")
+elem[70] = document.getElementById("c14")
+elem[71] = document.getElementById("c15")
+elem[72] = document.getElementById("c16")
+elem[73] = document.getElementById("c17")
+elem[74] = document.getElementById("c18")
+
+
+
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -170,6 +191,26 @@ elem[54].onclick = function(){over(elem[18]);};
 elem[55].children[1].innerHTML = 18 * 4;
 
 elem[56].onclick = function() {add()};
+
+
+elem[57].onclick = function() {clear(elem[1])};
+elem[58].onclick = function() {clear(elem[2])};
+elem[59].onclick = function() {clear(elem[3])};
+elem[60].onclick = function() {clear(elem[4])};
+elem[61].onclick = function() {clear(elem[5])};
+elem[62].onclick = function() {clear(elem[6])};
+elem[63].onclick = function() {clear(elem[7])};
+elem[64].onclick = function() {clear(elem[8])};
+elem[65].onclick = function() {clear(elem[9])};
+elem[66].onclick = function() {clear(elem[10])};
+elem[67].onclick = function() {clear(elem[11])};
+elem[68].onclick = function() {clear(elem[12])};
+elem[69].onclick = function() {clear(elem[13])};
+elem[70].onclick = function() {clear(elem[14])};
+elem[71].onclick = function() {clear(elem[15])};
+elem[72].onclick = function() {clear(elem[16])};
+elem[73].onclick = function() {clear(elem[17])};
+elem[74].onclick = function() {clear(elem[18])};
   
 
 
@@ -264,6 +305,9 @@ Number(elem[15].children[3].innerHTML)+
 Number(elem[16].children[3].innerHTML)+
 Number(elem[17].children[3].innerHTML)+
 Number(elem[18].children[3].innerHTML);
+}
 
-
+function clear(elem){
+  elem.children[2].innerHTML = "-"
+  elem.children[3].innerHTML = "-"
 }
