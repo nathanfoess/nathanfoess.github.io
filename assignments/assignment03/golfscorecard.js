@@ -76,8 +76,9 @@ elem[53]
 elem[54]
 = document.getElementById("over18")
 
+elem[55] = document.getElementById("totals")
 
-
+elem[56] = document.getElementById("finalScores")
 
 // display the number of children (all td elements)
 // console.log(elem.children.length);
@@ -106,7 +107,7 @@ elem[9].children[4].children[0].onclick
 elem[10].children[4].children[0].onclick 
   = function(){add1(elem[10]);};
 elem[11].children[4].children[0].onclick 
-  = function(){add1(elem[1]);};
+  = function(){add1(elem[11]);};
 elem[12].children[4].children[0].onclick 
   = function(){add1(elem[12]);};
 elem[13].children[4].children[0].onclick 
@@ -164,7 +165,12 @@ elem[50].onclick = function(){over(elem[14]);};
 elem[51].onclick = function(){over(elem[15]);};
 elem[52].onclick = function(){over(elem[16]);};
 elem[53].onclick = function(){over(elem[17]);};
-elem[54].onclick = function(){over(elem[18]);}
+elem[54].onclick = function(){over(elem[18]);};
+
+elem[55].children[1].innerHTML = 18 * 4;
+
+elem[56].onclick = function() {addScore()};
+  
 
 
 // create an "add1" function
@@ -193,4 +199,32 @@ function over (elem){
   }else{
     elem.children[3] = "-";
   }
+}
+
+function addScore (){
+  
+  
+  elem[55].children[2].innerHTML = 
+   
+Number(elem[1].children[2].innerHTML) +                             
+Number(elem[2].children[2].innerHTML)+
+Number(elem[3].children[2].innerHTML)+
+Number(elem[4].children[2].innerHTML)+
+Number(elem[5].children[2].innerHTML)+
+Number(elem[6].children[2].innerHTML)+
+Number(elem[7].children[2].innerHTML)+
+Number(elem[8].children[2].innerHTML)+
+Number(elem[9].children[2].innerHTML)+
+Number(elem[10].children[2].innerHTML)+
+Number(elem[11].children[2].innerHTML)+
+Number(elem[12].children[2].innerHTML)+
+Number(elem[13].children[2].innerHTML)+
+Number(elem[14].children[2].innerHTML)+
+Number(elem[15].children[2].innerHTML)+
+Number(elem[16].children[2].innerHTML)+
+Number(elem[17].children[2].innerHTML)+
+Number(elem[18].children[2].innerHTML);
+
+if (elem[55].children[2].innerHTML == "NaN")
+elem[55].children[2].innerHTML = "Finish the round";
 }
