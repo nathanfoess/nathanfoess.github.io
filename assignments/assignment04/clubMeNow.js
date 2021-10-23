@@ -91,7 +91,7 @@ function displayClubDistanceEntryForm(c) {
 
 // replace the current "clubs" array with the previous one
 function undoLastShot() {
-      clubs = str;
+      clubs = clubsUndo;
 }
 
 // create a new (default) "clubs" array
