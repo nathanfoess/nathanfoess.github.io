@@ -42,23 +42,23 @@
 <!-- ClubMeNow custom JS -->
 <script src='clubMeNow.js'></script>
 <script>
-	// retrieve the row of the user-chosen club
-	let clubRow = parseInt(localStorage.getItem('club'));
-	// retrieve the "clubs" array
-	let clubs = JSON.parse(localStorage.getItem('clubs'));
-	// display the full clubName of the user-chosen club
-	//let newClubName = document.getElementById("clubName").innerHTML;
-	//let newClubDistances;
+  // retrieve the row of the user-chosen club
+        let clubRow = parseInt(localStorage.getItem('club'));
+        // retrieve the "clubs" array
+        let clubs = JSON.parse(localStorage.getItem('clubs'));
 	
-	function addClub(newClubName) {
-		let numOfClubs = 14
-		numOfClubs++
-		if(numOfClubs >= 15){
-		window.alert("Warning: you are only allowed to carry 14 clubs in your golf bag in match play competition.");
-		}
-		
-		clubs.push([0, " ", newClubName, 0, 0, 0, 0, 0, 0, 0]);
-	}
+	 function addClub(newClubName) {
+
+            // save current clubs array for "Undo" functionality
+            let str = JSON.stringify(clubs);
+            localStorage.setItem("clubsUndo", str);
+            
+            clubs[clubs.length] = [clubRow, newClubName, newClubName, 0, 0, 0, 0, 0, 0, 0, 0];
+
+            str = JSON.stringify(clubs);
+            localStorage.setItem("clubs", str);
+
+        }
 	
 	// navigate to club distance LIST screen
     function cancelClub() {
