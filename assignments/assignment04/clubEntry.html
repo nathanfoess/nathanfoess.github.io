@@ -47,10 +47,10 @@
 	// retrieve the "clubs" array
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
 	// display the full clubName of the user-chosen club
-	let newClubName = document.getElementById("clubName").innerHTML
-	let newClubDistances;
+	//let newClubName = document.getElementById("clubName").innerHTML;
+	//let newClubDistances;
 	
-	function addClub() {
+	function addClub(newClubName) {
 		let numOfClubs = 14
 		numOfClubs++
 		if(numOfClubs >= 15){
