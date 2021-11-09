@@ -264,7 +264,8 @@ function makeNewArray(){
 
 for (let i=0; i < covidJsObj.Countries.length; i++) {
   if(Object.keys(populations).includes(covidJsObj.Countries[i].Slug) && covidJsObj.Countries[i].TotalDeaths >= 50000){
-  newArray.push({
+  let country = covidJsObj.Countries[i]
+	  newArray.push({
     "Slug": "\"" + covidJsObj.Countries[i].Slug + "\"",
     "TotalConfirmed": covidJsObj.Countries[i].TotalConfirmed,
     "TotalDeaths": covidJsObj.Countries[i].TotalDeaths,
