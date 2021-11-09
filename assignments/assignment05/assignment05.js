@@ -107,7 +107,7 @@ function loadContent() {
   covidJsObj = JSON.parse(covidJson);
   
       newConfirmedOver1000 = [];
-      makeNewArray();
+   
 	    for (let c of covidJsObj.Countries) {
         if (c.NewConfirmed > 5000) {
           newConfirmedOver1000.push({ 
@@ -117,8 +117,12 @@ function loadContent() {
           });
         }
       }
+	
+	  
       newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "NewDeaths", "desc");
 
+	 makeNewArray();
+	
       chartData.data.datasets[0].backgroundColor = "rgba(100,100,100,0.4)"; // gray
       chartData.data.datasets[1].backgroundColor  = "rgba(255,0,0,0.4)"; // red
       chartData.data.datasets[2].backgroundColor  = "rgba(0,0,255,0.4)"; // blue
