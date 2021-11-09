@@ -265,7 +265,7 @@ for (let i=0; i < covidJsObj.Countries.length; i++) {
     "TotalConfirmed": covidJsObj.Countries[i].TotalConfirmed,
     "TotalDeaths": covidJsObj.Countries[i].TotalDeaths,
     "Population": populations[covidJsObj.Countries[i].Slug],
-    "TotalConfirmedPer100000": Math.round(100000 * covidJsObj.Countries[i].TotalDeaths / populations[covidJsObj.Countries[i].Slug])
+    "TotalConfirmedPer100000": Math.round(100000 * country.TotalConfirmed / populations[country.Slug])
     
   })
   }
