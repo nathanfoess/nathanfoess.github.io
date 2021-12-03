@@ -14,27 +14,33 @@ function loadDoc() {
   
   // pre-fill defaults for first loan year
   var defaultYear = loans[0].loan_year;
-  document.getElementById("loan_year0" + 1).value = defaultYear++;
+  $("#loan_year0" + 1).val(defaultYear++);
   var defaultLoanAmount = loans[0].loan_amount;
-  document.getElementById("loan_amt0" + 1).value = defaultLoanAmount.toFixed(2);
+  $("#loan_amt0" + 1).val(defaultLoanAmount.toFixed(2));
   var defaultInterestRate = loans[0].loan_int_rate;
-  document.getElementById("loan_int0" + 1).value = defaultInterestRate;
+ $("#loan_int0" + 1).val(defaultInterestRate);
   var loanWithInterest = loans[0].loan_amount * (1 + loans[0].loan_int_rate);
-  document.getElementById("loan_bal0" + 1).innerHTML = toComma(loanWithInterest.toFixed(2));
+ $("#loan_bal0" + 1).html = toComma(loanWithInterest.toFixed(2));
   
-  // pre-fill defaults for other loan years
+  // pre-fill defaults for other loan years and int rates
+  
   for(var i=2; i<6; i++) {
-    document.getElementById("loan_year0" + i).value = defaultYear++;
-    document.getElementById("loan_year0" + i).disabled = true;
-    document.getElementById("loan_year0" + i).style.backgroundColor = "gray";
-    document.getElementById("loan_year0" + i).style.color = "white";
-    document.getElementById("loan_amt0" + i).value = defaultLoanAmount.toFixed(2);
-    document.getElementById("loan_int0" + i).value = defaultInterestRate;
-    document.getElementById("loan_int0" + i).disabled = true;
-    document.getElementById("loan_int0" + i).style.backgroundColor = "gray";
-    document.getElementById("loan_int0" + i).style.color = "white";
+    
+    //convert prefills to JQuery
+   $("#loan_year0" + i).val(defaultYear++);
+    
+    $("#loan_int0" + i).val("#loan_int01");
+    //setting properties to table
+    $("#loan_year0" + i).prop("disabled", true);
+    $("#loan_year0" + i).css({backgroundColor:"grey"});
+   $("#loan_year0" + i).css({color:"white"});
+    $("#loan_amt0" + i).val( defaultLoanAmount.toFixed(2));
+    $("#loan_int0" + i).val(defaultInterestRate);
+    $("#loan_int0" + i).prop("disabled", true);
+   $("#loan_int0" + i).css({backgroundColor:"gray"});
+    $("#loan_int0" + i).css({color:"white"});
    loanWithInterest = (loanWithInterest + defaultLoanAmount) * (1 + defaultInterestRate);
-   document.getElementById("loan_bal0" + i).innerHTML = toComma(loanWithInterest.toFixed(2));
+   $("#loan_bal0" + i).html(toComma(loanWithInterest.toFixed(2)));
     } // end: "for" loop
   
   // all input fields: select contents on focus
@@ -52,17 +58,26 @@ function loadDoc() {
     updateLoansArray();
   });
   
+  // set focus to first int rate: messes up codepen
+  // $("#loan_int01").focus();
+    $("#loan_int01").blur( function() {
+    updateLoansArray();
+  });
+  
 } // end: function loadDoc()
 
 
 function toComma(value) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
+//updates array with new int rate and year
 function updateLoansArray() {
   loans[0].loan_year = parseInt($("#loan_year01").val());
+  loans[0].loan_int_rate = parseFloat($("#loan_int01").val());
   for(var i=1; i<5; i++) {
     loans[i].loan_year = loans[0].loan_year + i;
+    loans[i].loan_int_rate = loans[0].loan_int_rate;
     $("#loan_year0"+ (i+1) ).val(loans[i].loan_year);
+    $("#loan_int0"+ (i+1) ).val(loans[i].loan_int_rate);
   }
 }
