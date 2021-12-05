@@ -74,6 +74,7 @@ function toComma(value) {
 function updateLoansArray() {
   loans[0].loan_year = parseInt($("#loan_year01").val());
   loans[0].loan_int_rate = parseFloat($("#loan_int01").val());
+  
   for(var i=1; i<5; i++) {
     loans[i].loan_year = loans[0].loan_year + i;
     loans[i].loan_int_rate = loans[0].loan_int_rate;
