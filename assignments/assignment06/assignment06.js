@@ -74,10 +74,13 @@ function loadDoc() {
           //set using default
             localStorage.setItem("loans", JSON.stringify(loans));
     } else {
-            loans = JSON.parse(localStorage.getItem("loans"));
+            
+            //update w local
+            loansString = localStorage.getItem("loans");
+            loans = JSON.parse();
             
             //set everything using local
-             var defaultYear = loans[0].loan_year;
+        var defaultYear = loans[0].loan_year;
         $("#loan_year0" + 1).val(defaultYear++);
         var defaultLoanAmount = loans[0].loan_amount;
         $("#loan_amt0" + 1).val(defaultLoanAmount.toFixed(2));
