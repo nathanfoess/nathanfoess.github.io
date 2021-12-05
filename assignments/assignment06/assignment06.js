@@ -74,7 +74,7 @@ function loadDoc() {
             
             localStorage.setItem("loanData", loans);
     } else {
-            loans = 
+            loans = localStorage.getItem("loans");
     }
 
     /* Old code  
@@ -221,4 +221,6 @@ function updateLoansArray() {
     intAccrued = totalBal - totalAmt;
 
     $("#loan_int_accrued").text(toComma(intAccrued.toFixed(2)));
+        
+         localStorage.setItem("loanData", loans);
 }
