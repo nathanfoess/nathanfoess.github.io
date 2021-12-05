@@ -71,10 +71,20 @@ function loadDoc() {
             loanWithInterest = (loanWithInterest + defaultLoanAmount) * (1 + defaultInterestRate);
             $("#loan_bal0" + i).html(toComma(loanWithInterest.toFixed(2)));
         } // end: "for" loop
-          
+          //set using default
             localStorage.setItem("loans", JSON.stringify(loans));
     } else {
-            loans = localStorage.getItem("loans");
+            loans = JSON.parse(localStorage.getItem("loans"));
+            
+            //set everything using local
+             var defaultYear = loans[0].loan_year;
+        $("#loan_year0" + 1).val(defaultYear++);
+        var defaultLoanAmount = loans[0].loan_amount;
+        $("#loan_amt0" + 1).val(defaultLoanAmount.toFixed(2));
+        var defaultInterestRate = loans[0].loan_int_rate;
+        $("#loan_int0" + 1).val(defaultInterestRate);
+        var loanWithInterest = loans[0].loan_amount * (1 + loans[0].loan_int_rate);
+        $("#loan_bal0" + 1).html = toComma(loanWithInterest.toFixed(2));
     }
 
     /* Old code  
