@@ -57,6 +57,22 @@ function loadDoc() {
   $("#loan_year01").blur( function() {
     updateLoansArray();
   });
+  //every time we leave an amount input, update array
+   $("#loan_amt01").blur( function() {
+    updateLoansArray();
+  });
+     $("#loan_amt02").blur( function() {
+    updateLoansArray();
+  });
+     $("#loan_amt03").blur( function() {
+    updateLoansArray();
+  });
+     $("#loan_amt04").blur( function() {
+    updateLoansArray();
+  });
+     $("#loan_amt05").blur( function() {
+    updateLoansArray();
+  });
   
   // set focus to first int rate: messes up codepen
   // $("#loan_int01").focus();
@@ -74,11 +90,22 @@ function toComma(value) {
 function updateLoansArray() {
   loans[0].loan_year = parseInt($("#loan_year01").val());
   loans[0].loan_int_rate = parseFloat($("#loan_int01").val());
+  //for loop woulnt work for some reason, did dumb way
+  for (var i = 0; i < 5; i++){
+    loans[i].loan_amount = parseFloat($("#loan_amt0" + (i + 1)).val());
+  }
   
+
+  //get value from input and fill in the rest w that value
   for(var i=1; i<5; i++) {
     loans[i].loan_year = loans[0].loan_year + i;
     loans[i].loan_int_rate = loans[0].loan_int_rate;
     $("#loan_year0"+ (i+1) ).val(loans[i].loan_year);
     $("#loan_int0"+ (i+1) ).val(loans[i].loan_int_rate);
+    
+    
+    //update loans array w new values to do the math
+    var loanWithInterest = loans[i].loan_amount * (1 + loans[i].loan_int_rate);
+    $("#loan_bal0" + (i+1)).val(toComma(loanWithInterest.toFixed(2)));
   }
 }
