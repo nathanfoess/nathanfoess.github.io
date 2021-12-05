@@ -145,7 +145,7 @@ function loadDoc() {
     $("#loan_int01").blur(function() {
         let regex = /[0][.][0-9]{4}/; //Check for a decimal interest rate
         if (regex.test($("#loan_int01").val()) == false) {
-            window.alert("Please enter a valid interest rate.");
+            window.alert("Please enter a valid interest rate. Must have 4 digits after decimal.");
         }
         updateLoansArray();
     });
