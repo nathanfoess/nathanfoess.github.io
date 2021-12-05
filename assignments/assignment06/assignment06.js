@@ -104,8 +104,31 @@ function updateLoansArray() {
     $("#loan_int0"+ (i+1) ).val(loans[i].loan_int_rate);
     
     
-    //update loans array w new values to do the math
-    var loanWithInterest = loans[i].loan_amount * (1 + loans[i].loan_int_rate);
-    $("#loan_bal0" + (i+1)).val(toComma(loanWithInterest.toFixed(2)));
+    
+   
   }
+  
+  //totoal for YE bal
+  let total = 0;
+  for(var i= 0;i<5;i++){
+     var loanWithInterest = loans[i].loan_amount * (1 + loans[i].loan_int_rate);
+    
+    total += loanWithInterest;
+    
+    console.log(total);
+    
+    $("#loan_bal0" + (i+1)).text(toComma(total.toFixed(2)));
+  }
+  
+  
+  //update interest accrued
+  let amt = 0;
+  let accrued = 0;
+  
+  for(var i = 0; i<5; i++){
+    amt += loans[i].loan_amount;
+  }
+  accrued = total - amt;
+  
+  $("#loan_int_accrued").text((accrued.toFixed(2)));
 }
