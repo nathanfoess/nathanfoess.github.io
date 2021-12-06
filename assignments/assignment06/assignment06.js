@@ -75,6 +75,7 @@ function loadDoc() {
         } // end: "for" loop
           //set using default
             localStorage.setItem("loans", JSON.stringify(loans));
+            console.log(localStorage.getItem("loans"));
     } else {
             
             //update w local
