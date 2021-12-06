@@ -31,6 +31,8 @@ var loans = [{
 
 function loadDoc() {
 
+        console.log(localStorage.getItem("loans");
+        
     //Check for preexisting data
     if (!localStorage.getItem("loans")) {
         // pre-fill defaults for first loan year
