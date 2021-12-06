@@ -138,7 +138,7 @@ function loadDoc() {
 
     // Check input and update loans array when exiting input fields (jquery)
  $("#loan_year01").blur(function() {
-        let regex = /[0-9]{4}/; //Check for a 4 digit number
+        let regex = /[0-9]{4}/; //Check for a 4 digit number WHY WONT IT WORK!!!
         if (regex.test($("#loan_year01").val()) == false) {
            $("#loan_year01").css("background-color", "red");
         }
