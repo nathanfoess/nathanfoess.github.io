@@ -77,7 +77,7 @@ function loadDoc() {
             
             //update w local
             loansString = localStorage.getItem("loans");
-            console.log(loanString);
+            console.log(loansString);
             
             //set everything using local
         var defaultYear = loans[0].loan_year;
