@@ -32,7 +32,7 @@ var loans = [{
 function loadDoc() {
 
     //Check for preexisting data
-    if (!localStorage.getItem("loanData")) {
+    if (!localStorage.getItem("loans")) {
         // pre-fill defaults for first loan year
         var defaultYear = loans[0].loan_year;
         $("#loan_year0" + 1).val(defaultYear++);
@@ -77,7 +77,7 @@ function loadDoc() {
             
             //update w local
             loansString = localStorage.getItem("loans");
-            loans = JSON.parse();
+            console.log(loanString);
             
             //set everything using local
         var defaultYear = loans[0].loan_year;
