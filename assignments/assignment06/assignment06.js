@@ -238,5 +238,5 @@ function updateLoansArray() {
 
     $("#loan_int_accrued").text(toComma(intAccrued.toFixed(2)));
         
-         localStorage.setItem("loans", loans);
+         localStorage.setItem("loans", JSON.stringify(loans));
 }
