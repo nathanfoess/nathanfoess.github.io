@@ -139,9 +139,9 @@ function loadDoc() {
     // Check input and update loans array when exiting input fields (jquery)
     $("#loan_year01").blur(function() {
         let regex = /[0-9]{4}/; //Check for a 4 digit year
-        if (regex.test($("#loan_year01").val()) == false) {
+        if (regex.test($().val()) == false) {
             window.alert("Please enter a valid year.");
-                  $(this).css("background-color", "red");
+                  $("#loan_year01").css("background-color", "red");
         }
         updateLoansArray();
     });
