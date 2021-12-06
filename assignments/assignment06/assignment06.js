@@ -141,6 +141,7 @@ function loadDoc() {
         let regex = /[0-9]{4}/; //Check for a 4 digit year
         if (regex.test($("#loan_year01").val()) == false) {
             window.alert("Please enter a valid year.");
+                  $(this).css("background-color", "red");
         }
         updateLoansArray();
     });
