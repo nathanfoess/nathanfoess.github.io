@@ -137,10 +137,10 @@ function loadDoc() {
     // $("#loan_year01").focus();
 
     // Check input and update loans array when exiting input fields (jquery)
-    $("#loan_year01").blur(function() {
-        let regex = /(?:(?:18|19|20|21)[0-9]{2})/; //Check for a 4 digit number 
-        if (regex.test($("loan_year01").val()) == false) {
-                  $("#loan_year01").css("background-color", "red");
+ $("#loan_year01").blur(function() {
+        let regex = /[0-9]{4}/; //Check for a decimal interest rate
+        if (regex.test($("#loan_year01").val()) == false) {
+           $("#loan_year01").css("background-color", "red");
         }
         updateLoansArray();
     });
