@@ -117,7 +117,7 @@ function loadDoc() {
         });
         $("#loan_int0" + i).prop("disabled", true);
         $("#loan_int0" + i).css({
-            backgroundColor: "gray"
+            backgroundColor: "grey"
         });
         $("#loan_int0" + i).css({
             color: "white"
@@ -138,7 +138,7 @@ function loadDoc() {
 
     // Check input and update loans array when exiting input fields (jquery)
  $("#loan_year01").blur(function() {
-        let regex = /(19|20)[0-9]{4}/; //Check for a 4 digit number
+        let regex = /[0-9]{4}/; //Check for a 4 digit number
         if (regex.test($("#loan_year01").val()) == false) {
            $("#loan_year01").css("background-color", "red");
         }
