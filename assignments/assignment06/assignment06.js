@@ -140,7 +140,6 @@ function loadDoc() {
     $("#loan_year01").blur(function() {
         let regex = /[0-9]{4}/; //Check for a 4 digit year
         if (regex.test($().val()) == false) {
-            window.alert("Please enter a valid year.");
                   $("#loan_year01").css("background-color", "red");
         }
         updateLoansArray();
@@ -149,7 +148,7 @@ function loadDoc() {
     $("#loan_int01").blur(function() {
         let regex = /[0][.][0-9]{4}/; //Check for a decimal interest rate
         if (regex.test($("#loan_int01").val()) == false) {
-            window.alert("Please enter a valid interest rate. Must have 4 digits after decimal.");
+           $("#loan_int01").css("background-color", "red");
         }
         updateLoansArray();
     });
@@ -157,7 +156,7 @@ function loadDoc() {
     $("#loan_amt01").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt01").val()) == false) {
-            window.alert("Please enter a valid loan amount.");
+            $("#loan_amt01").css("background-color", "red");
         }
         updateLoansArray();
     });
@@ -165,7 +164,7 @@ function loadDoc() {
     $("#loan_amt02").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt02").val()) == false) {
-            window.alert("Please enter a valid loan amount.");
+            $("#loan_amt02").css("background-color", "red");
         }
         updateLoansArray();
     });
@@ -173,7 +172,7 @@ function loadDoc() {
     $("#loan_amt03").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt03").val()) == false) {
-            window.alert("Please enter a valid loan amount.");
+            $("#loan_year03").css("background-color", "red");
         }
         updateLoansArray();
     });
@@ -181,7 +180,7 @@ function loadDoc() {
     $("#loan_amt04").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt04").val()) == false) {
-            window.alert("Please enter a valid loan amount.");
+            $("#loan_amt04").css("background-color", "red");
         }
         updateLoansArray();
     });
@@ -189,7 +188,7 @@ function loadDoc() {
     $("#loan_amt05").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt05").val()) == false) {
-            window.alert("Please enter a valid loan amount.");
+          $("#loan_amt05").css("background-color", "red");
         }
         updateLoansArray();
     });
