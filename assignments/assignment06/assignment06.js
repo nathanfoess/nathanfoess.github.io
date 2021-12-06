@@ -172,7 +172,7 @@ function loadDoc() {
     $("#loan_amt03").blur(function() {
         let regex = /[0-9]{1,}[.][0-9]{2}/; //Check for a number formatted as dollar amounts
         if (regex.test($("#loan_amt03").val()) == false) {
-            $("#loan_year03").css("background-color", "red");
+            $("#loan_amt03").css("background-color", "red");
         }
         updateLoansArray();
     });
