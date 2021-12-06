@@ -241,44 +241,58 @@ function updateLoansArray() {
          localStorage.setItem("loans", JSON.stringify(loans));
 }
 
-// ----- ANGULAR ----- TAKEN FROM SOLUTION ON CODEPEN
-//creates variable app and assign value angular module
-var app = angular.module("myApp", []);
+let updateForm = () => {
+  loanWithInterest = 0;
+  let totalAmt = 0;
+  for(i = 1; i < 6; i++) {
+    $(`#loan_year0${i}`).val(loans[i - 1].loan_year);
+    let amt = loans[i - 1].loan_amount;
+    $(`#loan_amt0${i}`).val(amt);
+    totalAmt += parseFloat(amt);
+    $(`#loan_int0${i}`).val(loans[i - 1].loan_int_rate);
+    loanWithInterest 
+      = (loanWithInterest + parseFloat(amt)) 
+      * (1 + loans[0].loan_int_rate);
+    $("#loan_bal0" + i).text(toMoney(loanWithInterest));
+  }
+  int = loanWithInterest - totalAmt;
+  $(`#loan_int_accrued`).text(toMoney(int));
+  
+} // end: function updateForm()
+  
 
-//contoller takes the total amount borrowed and spread it in how many years
-app.controller("myCtrl", function ($scope) {
-  $scope.payments = []; // controller connects with the view in HTML
+// ----- ANGULAR ----- TAKEN FROM CODEPEN
+
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+  $scope.payments = [];
   $scope.populate = function () {
-    //populates the payments array
-
-    updateForm(); //updates form
-
-    //payments
-    let total = loanWithInterest; //calculate total
+    
+    updateForm();
+    
+    let total = loanWithInterest;
     let iRate = loans[0].loan_int_rate;
     let r = iRate / 12;
     let n = 11;
     //loan payment formula
     //https://www.thebalance.com/loan-payment-calculations-315564
-    let pay =
-      12 * (total / (((1 + r) ** (n * 12) - 1) / (r * (1 + r) ** (n * 12)))); //formula to get computation with same payments for every period
+    let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
     for (let i = 0; i < 10; i++) {
-      //loop that generate the calculation as the period increases
-      total -= pay;
-      let int = total * iRate;
+      total -= pay 
+      let int = total * (iRate); 
       $scope.payments[i] = {
-        year: loans[4].loan_year + i + 1,
-        payment: toMoney(pay),
-        amt: toMoney(int),
-        ye: toMoney((total += int))
-      };
+        "year":loans[4].loan_year + i + 1,
+        "payment": toMoney(pay), 
+        "amt": toMoney(int),
+        "ye": toMoney(total += int)
+      }
     }
-    //calculates the last payment with the last total balance
     $scope.payments[10] = {
-      year: loans[4].loan_year + 11,
-      payment: toMoney(total),
-      amt: toMoney(0),
-      ye: toMoney(0)
-    };
-  };
+      "year":loans[4].loan_year + 11,
+      "payment": toMoney(total),
+      "amt": toMoney(0),
+      "ye":toMoney(0)
+    }
+  }
 });
