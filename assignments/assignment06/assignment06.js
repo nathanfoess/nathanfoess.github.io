@@ -65,7 +65,7 @@ function loadDoc() {
             $("#loan_int0" + i).val(defaultInterestRate);
             $("#loan_int0" + i).prop("disabled", true);
             $("#loan_int0" + i).css({
-                backgroundColor: "gray"
+                backgroundColor: "grey"
             });
             $("#loan_int0" + i).css({
                 color: "white"
