@@ -102,6 +102,25 @@
 							</table>
 						</div>
 					</div>
+					<div class="col-lg-6">
+            <div class="form-group">
+              <h2>Payments</h2>
+              <table class="table">
+                <tr>
+                  <th>Year</th>
+                  <th>Payments</th>
+                  <th>Int Amt</th>
+                  <th>YE Bal</th>
+                </tr>
+                <tr ng-repeat="x in payments">
+                  <td>{{ x.year }}</td>
+                  <td>{{ x.payment }}</td>
+                  <td>{{ x.amt }}</td>
+                  <td>{{ x.ye }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
 
 				</div>
 
